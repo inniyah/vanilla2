@@ -1,0 +1,1 @@
+IMPORTANT: Put the folder "views" into the themes folder of whatever theme you wish to use this plugin with.
