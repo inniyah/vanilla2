@@ -1,0 +1,24 @@
+DESCRIPTION
+===========
+Helps to achieve good localization.
+The problem: We cannot achieve good localization because same translation codes are used on different
+pages. For example, T('Edit') at discussions index and while editing role permissions in dashboard.
+
+CONFIGURATION
+=============
+$Configuration['Plugins']['SmartLocalization']['DisableRolePermissionsTranslate'] = TRUE;
+	This disables translation on add/edit role page, because rubbish translation is going out.
+
+TODO
+====
+- ability to skip (keep original code) for desired pages
+
+CHANGELOG
+=========
+2.6 (11 Dec 2011)
+- removed support for deprecated names
+- allow disable translation on add/edit role page
+
+2.5 (13 Jun 2011)
+- own caching system
+- changelog started
