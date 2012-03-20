@@ -51,9 +51,9 @@
 	<thead>
 		<tr>
 			<th><?php echo T('Dynamic Page Title'); ?></th>
-			<th>Custom Title</th>
-			<th>Parsed Tags &amp; Examples</th>
-			<th>Plugin Default</th>
+			<th><?php echo T('Custom Title'); ?></th>
+			<th><?php echo T('Parsed Tags &amp; Examples'); ?></th>
+			<th><?php echo T('Plugin Default'); ?></th>
 		</tr>
 	</thead>
 	<tbody>
