@@ -339,10 +339,11 @@ $Definition['version %s'] = 'versión %s';
 $Definition['View'] = 'Ver';
 $Definition['Visit Site'] = 'Visitar Sitio';
 
-$Definition['Warning'] = 'Advertencia';
+$Definition['Warning'] = 'Aviso';
 $Definition['We will attempt to use the local mail server to send email by default. If you want to use a separate SMTP mail server, you can configure it below.'] = 'Vamos a tratar de utilizar por defecto el servidor de correo local para enviar correo electrónico. Si quieres utilizar un servidor de correo SMTP separado, puedes configurarlo debajo.';
-$Definition['Welcome Aboard!'] = 'Bienvenido abordo!';
-$Definition['What\'s the Buzz?'] = '¿Qué es el Buzz?';
+$Definition['Welcome Aboard!'] = '¡Bienvenido/a a bordo!';
+$Definition['Welcome to Vanilla!'] = '¡Bienvenido/a a Vanilla!';
+$Definition['What\'s the Buzz?'] = '¿D?';
 $Definition['Within'] = 'Dentro de';
 
 $Definition['You can always use your password at<a href="%1$s">%1$s</a>.'] = 'Si alguna vez se le perdió la entrada en su foro, podrá entrar usando su correo electrónico original Vainilla y su contraseña en <a href="%1$s">%1$s</a>';
