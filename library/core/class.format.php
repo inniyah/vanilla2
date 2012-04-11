@@ -130,12 +130,14 @@ class Gdn_Format {
          $Route = Anchor(T($Activity->RouteCode), $Activity->Route);
       }
       //if ($Activity->ActivityID == 131) d($ActivityRouteLink, $Activity);
-
+      
       // Translate the gender suffix.
       $GenderSuffixCode = "GenderSuffix.$GenderSuffixCode.$GenderSuffixGender";
       $GenderSuffix = T($GenderSuffixCode, '');
       if ($GenderSuffix == $GenderSuffixCode)
          $GenderSuffix = ''; // in case translate doesn't support empty strings.
+      
+      $PersonType = ($ViewingUserID == $Activity->ActivityUserID ? "First." : "Third.") . $Activity->ActivityGender;
 
       /*
         Debug:
@@ -150,8 +152,8 @@ class Gdn_Format {
       .'/'.$GenderSuffix.($GenderSuffixCode)
       */
 
-      $FullHeadline = T("Activity.{$Activity->ActivityType}.FullHeadline", T($Activity->FullHeadline));
-      $ProfileHeadline = T("Activity.{$Activity->ActivityType}.ProfileHeadline", T($Activity->ProfileHeadline));
+      $FullHeadline = T("Activity.{$Activity->ActivityType}.FullHeadline.$PersonType", T($Activity->FullHeadline));
+      $ProfileHeadline = T("Activity.{$Activity->ActivityType}.ProfileHeadline.$PersonType", T($Activity->ProfileHeadline));
       $MessageFormat = ($ProfileUserID == $Activity->ActivityUserID || $ProfileUserID == '' || !$ProfileHeadline ? $FullHeadline : $ProfileHeadline);
       
       return sprintf($MessageFormat, $ActivityName, $ActivityNameP, $RegardingName, $RegardingNameP, $RegardingWall, $Gender, $Gender2, $Route, $GenderSuffix, $RegardingWallLink, $ActivityRouteLink);
