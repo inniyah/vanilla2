@@ -389,3 +389,4 @@ $Definition['Last IP'] = 'Última IP';
 $Definition['Register IP'] = 'IP inicial';
 $Definition['Mark All Viewed'] = 'Marcar todas leídas';
 $Definition['Popular Tags'] = 'Etiquetas más populares';
+$Definition['This image has been resized to fit in the page. Click to enlarge.'] = 'Esta imágen ha sido reducida para que quepa en la página. Pulsa sobre ella para verla a su tamaño real.';
