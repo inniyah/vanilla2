@@ -287,7 +287,7 @@ $Definition['Please wait while you are redirected. If you are not redirected, cl
 $Definition['Popular'] = 'Popular';
 $Definition['Popular Tags'] = 'Popular Tags';
 $Definition['Post Comment'] = 'Enviar Comentario';
-$Definition['Post Discussion'] = 'Enviar Discusión';
+$Definition['Post Discussion'] = 'Enviar Conversación';
 $Definition['Powered by Vanilla'] = 'Powered by Vanilla';
 $Definition['Preview'] = 'Previsualizar';
 $Definition['Profile Picture'] = 'Fotografía del perfil';
@@ -387,4 +387,5 @@ $Definition['Attach a file'] = 'Adjuntar un archivo';
 $Definition['Tags'] = 'Etiquetas';
 $Definition['Last IP'] = 'Última IP';
 $Definition['Register IP'] = 'IP inicial';
-$Definition['Mark All Viewed'] = 'Todas leídas';
+$Definition['Mark All Viewed'] = 'Marcar todas leídas';
+$Definition['Popular Tags'] = 'Etiquetas más populares';
