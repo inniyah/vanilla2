@@ -1,0 +1,359 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+/*Quick Links Panel
+
+I've added in a Quick Links section into the Panel. The code for this is in the default.master file to edit or delete as you choose.
+
+*/
+
+/*Menu Items*/
+
+/*I've added two dummy menu items, Link1 and Link 2 (they go to Vanilla and my forum atm) so you can see how to do it.Previously I had to make an entry in the config file, but that doesn't seem necessary any more. Just edit the deafult.master file as requried, either deleting them or changing them to your purposes.*/
+
+/*Let's get going!*/
+
+/* Change the colour of the head section that contains the site name/banner*/
+
+	#Head {
+   background: #900;
+   padding: 0;
+}	
+
+/* Set a background colour for the main section of the forum. Needs a <div id="Frame"> added after <body id...> tag in default.master*/
+
+	#Frame{
+background-color:#bbefff; }
+
+/*If you want a background image, uncomment the next chunk of code and comment out or delete the background-colour.
+  If you want the image to extend all the way to the top, set #Head background: none 
+*/
+/*background: url('../images/kit.gif') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+		min-height:863px;}*/
+		
+		
+/*Set default font properties for anything not overwritten by other rules*/
+
+	body {
+   color: #900;
+	font-family: Tahoma, Geneva, sans-serif
+	font-size: 90%;
+	line-height: 1.7em;
+   padding: 0;
+   text-align: center;
+   font-size: small;
+}
+
+
+
+
+/* To change the Header and/or text color etc uncomment the lines below*/
+
+/*#Panel .GuestBox p, #Panel .GuestBox h4{ background: #0F3; color: #FF0; font-size: 1.1em; padding: 10px; margin: 0; position: relative; top: 150px;}*/
+
+
+/*Sets default behaviour for hyperlinks not overwritten by other rules.*/
+a			{ color: #900; text-decoration: none; }
+a:hover		{ color: #38ABE3; }
+a img		{ border: none; }
+ul, ol		{ margin: 0; padding: 0; list-style: none; }
+
+
+/*Sets properties for the Discussions and comment boxes */
+
+
+	.DataList .Item {
+	color: #900;
+    background-color: #F60; /*This changes the background colour of the comment box*/
+	border-radius:10px; /*sets the 'roundness' of the box corners.*/
+}
+			
+	.DataList .Alt {
+    background-color: #CC0;  /*This sets a different background colour for alternate comment boxes*/
+    }
+	
+	
+/*The two examples below show how you can have different rules for an element on different pages.
+
+You do this by putting .Pagename before the rule.
+
+.DataList affects the discussion and comment boxes. If you uncomment these, the Discussions page boxes will change to alternate black and white.
+	
+*/
+
+/*
+.Discussions 	.DataList .Item {
+	color: #900;
+    background-color: #000; 
+    border-radius:10px; 
+}
+	
+.Discussions 	.DataList .Alt{
+	color: #900;
+    background-color: #fff; 
+	border-radius:10px; 
+}
+*/
+	
+	.DataList li.Item, .Conversation li.Item {
+	border-bottom: 1px dotted #ccc; position: relative; padding: 10px; /*Affects borders for discussion and comment boxes. */
+}	
+
+
+	.DataList li.Item a.Title	{ display: block; font-size: 1.15em; font-weight: bold; padding: 0 0 8px; font-size: 14px;	/*Affects titles io Discussions*/
+}
+
+/*sets colour for links within Discussion and Comment boxes*/
+
+	.DataList .Item  a{
+		color:#38ABE3;
+		} 
+
+	.DataList .Item  a:hover {color:#900;
+	}
+	
+	/*sets different colour for links within Discussion boxes */
+	
+.Discussions 	.DataList .Item  a{color:#900;
+} 
+
+.Discussions 	.DataList .Item  a:hover {color:#38ABE3;
+}
+
+
+/*In the unlikely event you wanted different hyperlink colours for the alternative boxes, uncomment the following and set as required*/
+
+/*.DataList .Alt a{color:#000;}	
+.DataList .Alt  a:hover {color:#38ABE3;}*/
+
+
+/* Other changes you can make to DataLists*/
+
+
+/*Change the backgorund colour of the user's posts.*/
+.DataList .Mine			{ background: #eff5ef; border-bottom-color: #fff; 
+} 
+
+/*Changes the properties of the conversations in the Inbox.*/
+.Messages .MessageList .Item {background:#f8f8f8; border-radius: 10px;
+} 
+
+.Messages .MessageList .Mine {background:#eff5ef;
+}
+
+/*.DataList li.New			{ background: #FF0; color: #000;}
+.DataList li.Bookmarked		{ background: #ffdf5d; border-bottom-color: #fff; }
+
+.DataList li.Closed		{ background: #eee; }
+.DataList .Meta .Closed			{ color: #333; }
+.DataList li.Closed a.Title	{ text-decoration: line-through; }*/
+
+/*I wanted the Announcement boxes to stand out from the ordinary threads, so I added a  border.*/
+.DataList li.Announcement	{ border-color: #000; border: 2px;
+border-style: groove; border-radius: 10px; }
+}
+
+
+/*Menu/Navigation*/
+
+/* Changing the Menu
+This example has a highlight box around the selected or hovered menu item, and a rounded top right corner. Play around to suit yourself, or comment out for the default option.*/
+
+
+	#Menu li		{ float: left; margin: 0 1px 0 0; }
+	#Menu a			{ display: block; background: #669; padding: 2px 10px; border-top-right-radius:10px; }
+	#Menu a:hover, 	#Menu li.Highlight a	{ background: #9CF; color: #900; text-decoration: none;}
+	
+	#Menu li.NonTab { position: relative; ; float: right;}
+	
+/*Set the properties for the Options drop down Menu on Discussions page.*/	
+
+	    .MenuItems { 
+		
+    background: none repeat scroll 0 0 #fff;
+
+    color: #900;
+
+    }
+
+/*Change the colour of the boxes at the top of Discussions page and Threads*
+
+Vanilla has a couple of different shades around the boxes. Change them with the follwing lines. I've deliberately left the colours obvious (i.e. horrible) so you can see where they affect.*/
+
+/* Affects the box holding All Discussions - My Discussions etc. */
+	.Tabs{background: #fff; color: #900;
+	}
+	
+/*Affects colour of box holding the Write comment section in threads */
+	.MessageForm {background: #90F;
+	} 
+	
+/*Changes the background colour for the box holding the Write comment */
+	.Tabs li, .SubTab	{  padding: 5px 8px; display: inline-block; border-radius:3px; background:#333;} /*Changes the shading around some of the boxes*/
+
+ /*Affects the title in discussion threads The !important gives the rule priority. I don't know why, but the rule wasn't being taken up without it. */
+ 
+.SubTab {font-size: 14px !important;
+}
+
+
+/* Use the following to change the settings for the buttons for All Discussions and also Write Discussion etc. */
+
+
+	.TabLink,
+.TabLink:link,
+.TabLink:hover,
+.TabLink:active,
+.TabLink:visited {
+ 
+   background: #6F6;
+
+   color: #900;
+   
+   font-size: 12px;
+
+}
+.TabLink:hover {
+   background: #900; color: #FFF;
+}
+.Active .TabLink {
+   background: #900;
+   color: #fff;
+}
+
+.Active .TabLink:hover {
+   background: #fff;
+   color: #900;
+}
+
+/*Panels
+
+The side sections.
+
+*/
+
+#Panel li {background:#f8f8f8; border-radius:5px; width: 250px;} /*Sets the background colour and padding for the Panel on the right hand side.*/
+
+.PanelInfo li			{ border-top: 1px dotted #ccc; padding: 3px 5px; }
+.PanelInfo li strong	{ font-weight: normal; }
+.PanelInfo li.Active a	{ color: #38ABE3; }
+.PanelInfo li.Parent	{ background: #ccc; padding: 2px 5px; font-size: 1.1em; font-weight: bold; }
+
+.PanelInfo {
+	background: #000; /* You won't see the bnackground colour if the width is the same as the content on top. In this example you can jsut see the black background behind teh rounded corners.*/
+	width: 260px;
+}
+
+
+/*Sets the link and hover colour for the Panels if you want them to be different to the default ones.)*/
+#Panel a {color: #909; text-decoration:none;} 
+#Panel a:hover {color: #999; text-decoration:none;}
+#Panel .Active a {color: #F00; background: #00F; text-decoration:none;} 
+
+/*Quick Links Panel
+
+I've added in Quick Links section into the Panel. The code for this is in the default.master file to edit or delete as you choose.*/
+
+#Panel .GuestBox {position: relative; top: 50px;} /*Affects the Sign in/apply box.*/
+
+#Panel h4		{ margin: 10px 0 0; color: #0F0;} /* Changes the colour of the headings in the panel*/
+
+/* I wanted to position the Quick Links box (with the id LinkExchange) more specifically. This also shows how you can affect the same element differently by calling the page name first. So in the example below, the Quick Link Box is positioned differently on the Discussions, Discussion, and Profile pages.
+
+I've changed the bg colours as well, just to show that you can set the same element to have different properties on each page.
+
+If you don't want to use the Quick Links panel at all, you can delete the position: and top: entries for the affected lines.
+*/
+
+/*This is the div name for the Quick Links box*/
+
+#LinkExchange{ position:relative; background:#f8f8f8; }
+
+/* The following rules sort out elements on different pages to position them correctly following moving the Quick Links box down the page a bit.
+
+If you don't use the Quick Links box you can just delete or comment them out. */
+
+.Profile #LinkExchange{ position:relative;  background:#00CC99; }
+.Profile #Panel .GuestBox {position: relative; top: 0px;}
+.Profile .PanelInfo {width: 230px;}
+
+.Discussions #LinkExchange {position:relative; top: 55px; }
+.Discussion #LinkExchange {position:relative; top: 80px; }
+.Discussion a.NewDiscussion {margin: 2px 0px 10px 0px ; position: relative; right: -20px; top: 80px;}
+.Categories #LinkExchange, .Activity #LinkExchange {position:relative; top: 40px;} /*Here, two different pages share the same effect.*/
+
+#ConversationMessage {color:#3F0, background: #FC3;}
+
+/*.Categories .BoxCategories {position:relative; top: 130px;}
+.Categories */
+
+
+/* Panel Boxes */
+
+
+div.Box {
+	background: #f8f8f8;
+	width: 360px;
+	border-radius: 5px;
+}
+
+#Panel .Box {
+	background: #f8f8f8;
+	width: 260px;
+	border-radius: 5px;
+}
+
+/*Because I fixed the BigButton position, I needed to move this box on the Discussions page down a bit.*/
+div.BoxCategories {
+	background: #f8f8f8;
+	width: 260px;
+	border-radius: 5px;
+	position:relative; top: 80px; 
+}
+
+/*Because I fixed the BigButton position, I needed to move this box on the Categories page down a bit.*/
+div.CategoryFollowToggleBox{position:relative; top: 80px; background: #f8f8f8;} 
+
+/* As a result of moving other boxes, I had to fix the position of the Bookmarked Discussion box.*/
+
+#Bookmarks {position:relative; top: 80px; background: #f8f8f8;} 
+
+/*If you change the Panel size you may want/need to resize for the Panel on the Profile page.*/
+
+.Profile #Panel {background:#fff; border-radius:5px; }
+
+.Profile #Panel .Box {background:#fff; border-radius:5px; width: 227px ;}
+
+.Profile #Panel li {background:#f8f8f8; border-radius:5px; width: 227px;} /*Sets the background colour and padding for the Panel on the right hand side.*/
+
+
+.Block		{ padding: 15px; background: #ddd; margin: 0 10px 0 0; }
+.Post #Panel, .Search #Panel {
+	display: none;
+}
+
+/* Buttons*/
+
+/*These change the smaller input buttons for things like Search box Post comment etc.*/
+input.Button, input.Cancel {
+	cursor: pointer; border: none; background: #000; color: #900; padding: 4px;
+}
+input.Button:hover, input.Cancel:hover {
+	background: #900; color: #fff;
+}
+
+/*As yuou may imagine - changes the properties of the larger buttons. No, really!*/
+
+a.BigButton	{ display: block; background: #fff;  color: #900 !important; padding: 5px;  font-size: 1.1em; font-weight: bold; border-radius: 5px;}
+a.BigButton:hover	{ background: #900; color: #fff !important; }
+a.ClearConversation	{ margin: 5px  10px 5px 38px; width: 200px; }
+a.NewDiscussion {margin: 2px 0px 10px 0px ; position: relative; right: -20px; top: 60px;}
+
+
+
