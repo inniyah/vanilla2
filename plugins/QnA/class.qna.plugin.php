@@ -408,8 +408,8 @@ class QnAPlugin extends Gdn_Plugin {
       $Form = $Sender->Form; //new Gdn_Form();
       $QuestionButton = !C('Plugins.QnA.UseBigButtons') || GetValue('Type', $_GET) == 'Question';
       if (!$Form->IsPostBack()) {
-         if (!property_exists($Sender, 'Discussion')) {
-            $Form->SetValue('Type', 'Question');
+         if (!property_exists($Sender, 'Question')) {
+            $Form->SetValue('Type', 'Discussion');
          } elseif (!$Form->GetValue('Type')) {
             $Form->SetValue('Type', 'Discussion');
          }
