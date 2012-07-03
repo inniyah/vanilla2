@@ -3,7 +3,7 @@
 // Define the plugin:
 $PluginInfo['FirstLastNames'] = array(
    'Description' => 'Adds required First Name and Last Name fields for users and allows them to be displayed in place of usernames',
-   'Version' => '1.3.1',
+   'Version' => '1.3.2',
    'Author' => "Jonathan Pautsch",
    'AuthorEmail' => 'themes@secondwindprojects.com',
    'AuthorUrl' => 'http://secondwindprojects.com/'
@@ -108,6 +108,14 @@ class FirstLastNames extends Gdn_Plugin
 			<?php } ?>
 		</ul>
 		<?php
+	}
+	
+	public function UserController_Render_Before($Sender)
+	{
+		if(strcasecmp($Sender->RequestMethod,'add')==0)
+		{
+			$Sender->View = $this->GetView('add.php');
+		}
 	}
 	
 	public function DiscussionController_CommentInfo_Handler($Sender)
