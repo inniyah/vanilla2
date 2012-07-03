@@ -13,14 +13,16 @@
 
 /**
  * Changelog:
- * v0.1b:Thu Mar  8 14:19:37 GMT 2012
+ * v0.1.1b:Thu Mar  8 14:19:37 GMT 2012
  * - move CategoryHeadingJson to definition rather then inline javascript
+ * v0.1,2b:Tue Jun 26 17:30:43 BST 2012
+ * - panel items not included due to not setting view directly. 
  */
 $PluginInfo['CategoryHeadings'] = array(
    'Name' => 'Category Headings',
    'Description' => 'Allows the setting of categories as headings, displaying the subcategories. You can lock these category heading, to prevent posting.  Comes with view templates, you can move to your theme.',
    'RequiredApplications' => array('Dashboard' => '>=2.0.18.1'),
-   'Version' => '0.1.1b',
+   'Version' => '0.1.2b',
    'Author' => 'Paul Thomas',
    'AuthorEmail' => 'dt01pqt_pt@yahoo.com',
    'AuthorUrl' => 'http://www.vanillaforums.org/profile/x00'
@@ -131,16 +133,13 @@ class CategoryHeadings extends Gdn_Plugin {
 	
 			$Sender->SetData('CategoryChildren',$CategoryChildren);
 		}
-		$Sender->ControllerName='';
-		$Sender->ControllerFolder='';
 		$ThemeViewLoc = CombinePaths(array(
 			PATH_THEMES, $Sender->Theme,'views', 'categoryheadings'
 		));
 		if(file_exists($ThemeViewLoc.DS.strtolower($Sender->RequestMethod).'.php')){
-			$Sender->ApplicationFolder= '';
-			$Sender->ControllerName='categoryheadings';
+			$Sender->View=$ThemeViewLoc.DS.strtolower($Sender->RequestMethod).'.php';
 		}else{
-			$Sender->ApplicationFolder='plugins/CategoryHeadings';
+			$Sender->View=$this->GetView(strtolower($Sender->RequestMethod).'.php');
 		}
 		
 		$Sender->AddJsFile('categories.js','vanilla');
