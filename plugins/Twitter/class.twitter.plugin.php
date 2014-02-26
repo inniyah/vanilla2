@@ -31,7 +31,7 @@ require_once PATH_LIBRARY.'/vendors/oauth/OAuth.php';
 
 class TwitterPlugin extends Gdn_Plugin {
    public static $ProviderKey = 'Twitter';
-   public static $BaseApiUrl = 'http://api.twitter.com/1.1/';
+   public static $BaseApiUrl = 'http://api.twitter.com/1.1/'; // Edit by @tdh, hat tip mrpta on vanillaforums.org
 
    protected $_AccessToken = NULL;
 
