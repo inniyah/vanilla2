@@ -9,18 +9,16 @@
 
 // Define the plugin:
 $PluginInfo['Maintenance'] = array(
-   'Name' => 'Vanilla Maintenance',
-   'Description' => '<a href="#" target="_blank">Maintenance plugin for Vanilla 2.</a>',
-   'Version' => '0.4',
+   'Name' => 'Closed For Maintenance',
+   'Description' => 'Maintenance plugin for Vanilla 2, allows you to close your site to do maintenance',
+   'Version' => '0.8',
    'Author' => "Adrian Speyer",
-   'AuthorEmail' => 'adriansprojects+vanilla@gmail.com',
-   'AuthorUrl' => 'http://www.adrianspeyer.com/projects',
    'RequiredApplications' => array('Vanilla' => '>=2')
 );
 
-class WebHead implements Gdn_IPlugin {
+class Maintenance  extends Gdn_Plugin {
 
-    public function Base_Render_Before(&$Sender) {
+    public function Base_Render_Before($Sender) {
 		if ( Gdn::Session()->CheckPermission('Garden.Settings.Manage'))
 		{
 		echo '<div style="color:#00FF00; background-color:red;text-align:center;"><b>The site is currently in Maintenance Mode</b></div>';
