@@ -1,0 +1,457 @@
+body {
+	background: #fff;
+}
+
+body #Head h1 {
+	display: block;
+        padding: 0px 0px 0px 0px;
+}
+
+.Menu {
+	margin: 5px auto;
+}
+
+#Panel {
+        width: 250px;
+        float: left;
+        margin-left: 1px;
+}
+
+#Content {
+        float: right;
+        margin-right: 1px;
+        margin-top: 1px;
+}
+
+
+#Menu {
+	display: inline-block;
+	vertical-align: bottom;
+	height: 35px;
+        width: 960px;
+	margin-bottom: -5px;
+        margin-right: 0;
+        background: rgb(73, 94, 177);
+        -moz-box-shadow: 0px 1px 3px rgb(58, 58, 58);
+        -webkit-box-shadow: 0px 1px 3px rgb(58, 58, 58);
+        box-shadow: 0px 1px 3px rgb(58, 58, 58);
+}
+
+#Head {
+	background: #fff;
+	padding: 1px;
+}
+
+#Menu a {
+        font-size: 14px;
+        height: 5px;
+        color: #fff;
+}
+
+#Menu a:hover {
+        color: #F5F5F5;
+        text-decoration: none;
+}
+
+#Menu li {
+        line-height: 35px;
+        margin: 0px 4px 0 0;
+        height: 35px;
+}
+
+.Tabs,
+.Headings {
+	display: block;
+   	padding: 5px 8px;
+   	margin: -1px;
+   	background: rgb(105, 105, 105);
+   	position: relative;
+        border: none;
+        -moz-box-shadow: 0px 1px 3px 0px #888;
+        -webkit-box-shadow: 0px 1px 3px 0px #888;
+        box-shadow: 0px 1px 3px 0px #888;
+   	border-radius: 3px;
+   	-moz-border-radius: 3px;
+   	-webkit-border-radius: 3px;
+}
+
+.MessageForm {
+        display: block;
+        padding: 10px 9px;
+        margin: 0;
+        background: none;
+        position: relative;
+        border-bottom: none;
+}
+
+.TabLink,
+.TabLink:link,
+.TabLink:hover,
+.TabLink:active,
+.TabLink:visited {
+   	margin: 0;
+	border: none;
+   	border-radius: 2px;
+   	-moz-border-radius: 2px;
+   	-webkit-border-radius: 2px;
+   	background: rgb(231, 231, 231);
+   	display: inline;
+   	font-weight: bold;
+   	color: rgb(87, 87, 87);
+   	text-decoration: none;
+   	padding: 5px 10px;
+	line-height: 2.6;
+	white-space: nowrap;
+}
+.TabLink:hover {
+   	color: #000;
+        border: none;
+}
+
+.Active .TabLink {
+	background: rgb(231, 231, 231);
+	color: #000;
+        border: none;
+}
+
+.Tabs li a span {
+	line-height: 1;
+	font-size: 80%;
+	padding: 0 3px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	font-weight: normal;
+	background: rgb(85, 85, 85);
+	color: #fff;
+	margin: 0 0 0 4px;
+}
+
+.DataList .Item {
+	position: relative;
+	background-color: #fff;
+	padding: 4px 0px;
+	margin: 5px 0 5px;
+	border-bottom: 1px solid #ccc;
+}
+
+a {
+	text-decoration: none;
+	color: rgb(82, 82, 82);
+}
+
+a:hover {
+   	text-decoration: none;
+   	color: rgb(116, 116, 116);
+}
+
+.DataList .Meta a.Category {
+	background: rgb(220, 220, 220);
+	padding: 2px 4px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+
+.DataList li.Mine .Meta a.Category {
+	background: rgb(220, 220, 220);
+}
+
+a.BigButton {
+	text-align: center;
+	display: block;
+	cursor: pointer;
+	margin: 0 0 10px;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 8px 0;
+	background: #f8f8f8;
+	background: -webkit-gradient(linear, center bottom, center top, from(rgb(221, 221, 221)), to(rgb(255, 255, 	255)));
+	background: -moz-linear-gradient(top, #ffffff, #cccccc);
+	-pie-background: linear-gradient(top, #ffffff, #cccccc);
+	background: linear-gradient(top, #ffffff, #cccccc);
+	color: rgb(80, 80, 80);
+	text-shadow: 0 1px 0 #fff;
+	border: 1px solid #999;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	box-shadow: 0px 0px 2px #999;
+	-moz-box-shadow: 0px 0px 2px #999;
+	-webkit-box-shadow: 0px 0px 2px #999;
+}
+
+.Box {
+     	background: rgb(248, 248, 248);
+        -moz-box-shadow: 0px 1px 5px 0px #888;
+        -webkit-box-shadow: 0px 1px 5px 0px #888;
+        box-shadow: 0px 1px 5px 0px #888;
+}
+
+.PanelInfo .Active {
+	border-bottom: 1px solid #ccc;
+        background: none;
+}
+
+.PanelInfo li {
+	background: rgb(248, 248, 248);
+	border-bottom: 1px solid #ccc;
+}
+
+.Box h4 {
+	color: #fff;
+        background: rgb(105, 105, 105);
+        padding: 4px 0px 3px 5px;
+        margin-top: -6px;
+        margin-left: -11px;
+        margin-right: -11px;
+        border-bottom: 1px solid #aaa;
+        -moz-box-shadow: 0px 1px 5px -2px #888;
+        -webkit-box-shadow: 0px 1px 5px -2px #888;
+        box-shadow: 0px 1px 5px -2px #888;
+   	border-top-left-radius: 3px;
+   	-moz-border-top-left-radius: 3px;
+   	-webkit-border-top-left-radius: 3px;
+   	border-top-right-radius: 3px;
+   	-moz-border-top-right-radius: 3px;
+   	-webkit-border-top-right-radius: 3px;
+}
+
+.Box h4 a {
+        color: #fff;
+}
+
+.Box h4 a:hover {
+        color: #ccc;
+}
+
+.PanelInfo .Active a {
+	color: #000;
+        font-weight: bold;
+}
+
+.PanelInfo {
+	border-top: none;
+        padding-top: 3px;
+}
+
+.Tabs .SubTab {
+	margin: 5px 0 0;
+        color: #fff;
+        background: rgb(231, 231, 231);
+}
+
+.Headings .ItemHeading {
+	color: #fff;
+}
+
+#DiscussionForm form {
+	background: #fafafa none repeat scroll 0 0;
+	border: 1px solid #ccc;
+}
+
+a.Button,
+.Button {
+	color: rgb(80, 80, 80);
+}
+
+.Foot {
+	background: rgb(248, 248, 248);
+        border: 1px solid #ccc;
+
+}
+
+.Tabs li a {
+	color: #fff;
+}
+
+.Activities .Excerpt a:hover, .Activities .Meta a:hover {
+	color: #000;
+}
+
+.Activities .Excerpt a, .Activities .Meta a {
+	color: #474747;
+}
+
+body.Profile .PanelInfo {
+	border-bottom: 1px solid #ccc;
+}
+
+.CommentForm a.Back, .CommentForm a.Cancel {
+	color: #000;
+}
+
+.Preview {
+	background: rgb(235, 235, 235);
+}
+
+div.Popup h1, div.Popup h2 {
+	background: rgb(73, 94, 177);
+	border-bottom: 1px solid #fff
+}
+
+body.Entry #Content h1 {
+	color: rgb(85, 85, 85);
+}
+
+a.Close {
+        color: #fff;
+}
+
+.HeadingTabs .SubTab {
+        background: none;
+}
+
+#Head .Search {
+	position: absolute;
+	right: 5px;
+	bottom: 0px;
+	text-align: right;
+}
+
+#Head form input.Button {
+        margin-bottom: 1px;
+}
+
+#Head form input.InputBox {
+	padding: 3px;
+	-moz-border-radius: 2px;
+	-webkit-border: 2px;
+	border: 1px solid rgb(150, 150, 150);
+}
+
+.Breadcrumbs {
+        color: rgb(148, 148, 148);
+        padding-bottom: 10px;
+}
+
+.Breadcrumbs a {
+        color: rgb(148, 148, 148);
+        font-weight: normal;
+}
+
+.titleHeadings {
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 2;
+        display: inline-block;
+        padding-right: 10px;
+}
+
+.DataList .Meta .Closed {
+	background: rgb(116, 116, 116);
+}
+
+.DataList .Meta .Announcement {
+	background: rgb(73, 73, 73);
+}
+
+ul.Discussion {
+        margin-left: 5px;
+}
+
+#Menu li.NonTab a {
+        font-weight: bold;
+}
+
+.MessageForm .Tabs {
+        padding: 2px;
+        border: 0;
+        text-align: left;
+        background: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+}
+
+.CommentForm textarea.TextBox {
+        max-width: 654px;
+}
+
+#DiscussionForm textarea {
+        max-width: 910px;
+}
+
+form.Activity textarea {
+        max-width: 652px;
+}
+
+body.Profile #Content {
+        width: 689px;
+}
+
+body.Profile #Content {
+        width: 689px;
+}
+
+#DiscussionForm form {
+        margin-left: 4px;
+}
+
+#Foot div {
+        display: inline-block;
+        vertical-align: bottom;
+        width: 960px;
+        background: rgb(73, 94, 177);
+        -moz-box-shadow: 0px 1px 3px rgb(58, 58, 58);
+        -webkit-box-shadow: 0px 1px 3px rgb(58, 58, 58);
+        box-shadow: 0px 1px 3px rgb(58, 58, 58);
+}
+
+#Foot a {
+        color: rgb(235, 235, 235);
+        padding-left: 5px;
+}
+
+#Foot a:hover {
+        color: #fff;
+        padding-left: 5px;
+}
+
+textarea.MultiComplete {
+	max-width: 222px;
+        margin-top: 5px;
+}
+
+.Mine {
+	background: rgb(236, 236, 236);
+}
+
+#MessageForm {
+	background: none;
+}
+
+#MessageForm h2 {
+	color: rgb(116, 116, 116);
+}
+
+#MessageForm textarea {
+	max-width: 656px;
+}
+
+.Popup #ConversationForm .TextBox {
+	max-width: 472px;
+}
+
+.ac_over {
+	background: rgb(216, 216, 216);
+	color: rgb(0, 0, 0);
+}
+
+.ac_over strong {
+	background: none;
+}
+
+.DataList .Meta strong {
+	background: rgb(73, 94, 177);
+	color: rgb(255, 255, 255);
+}
+
+.MessageList .Item {
+	border-bottom: 1px solid #ccc;
+}
+
+#Menu a span {
+	color: #000;
+}
